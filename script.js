@@ -27,7 +27,7 @@ document.getElementById("run").addEventListener("click", async () => {
   document.getElementById("output").textContent = "⏳ Running...";
 
   try {
-    const res = await fetch("http://localhost:3000/run", { // Change to your Render URL after deploy
+    const res = await fetch("https://ide-backend-nklt.onrender.com/run", { // Change to your Render URL after deploy
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -47,3 +47,4 @@ document.getElementById("run").addEventListener("click", async () => {
     document.getElementById("output").textContent = `❌ Request failed: ${err}`;
   }
 });
+
